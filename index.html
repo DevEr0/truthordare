@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#26122f">
-  <meta name="description" content="100 sweet, spicy, funny, and flirty Truth or Dare prompts. Ask a little, feel a lot.">
+  <meta name="description" content="279 romantic, flirty, funny, and intimate questions, with the first 100 featured. Ask a little, feel a lot.">
   <title>Afterglow — Truth or Dare</title>
   <style>
     :root{color-scheme:dark;--ink:#fff6f5;--muted:#d7bfce;--rose:#ffc7d3;--hot:#ff83ae;--glass:rgba(255,244,250,.105);--stroke:rgba(255,238,247,.19);--radius:31px}
@@ -39,6 +39,7 @@
     .edit-trigger:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
     .edit-trigger svg{width:17px;height:17px}
     .hero{text-align:center;padding:38px 0 25px}
+    .personal-title{display:table;margin:0 auto 16px;padding:8px 18px;border:1px solid rgba(255,205,224,.32);border-radius:999px;background:rgba(255,194,213,.1);color:#ffd0df;font-family:Georgia,'Times New Roman',serif;font-size:16px;letter-spacing:1.3px}
     .eyebrow{display:inline-flex;align-items:center;gap:9px;margin:0 0 13px;color:#ffbfd3;font-size:12px;font-weight:750;letter-spacing:3.2px;text-transform:uppercase}
     .eyebrow::before,.eyebrow::after{content:"✦";font-size:13px;color:#ffd7a3}
     h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(43px,6.1vw,79px);font-weight:400;letter-spacing:-2.9px;line-height:1.03;margin:0 auto 14px;text-wrap:balance;max-width:850px;text-shadow:0 12px 35px #20102433}
@@ -90,6 +91,7 @@
     .list-question:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.3)}
     .list-question small{display:block;color:#ffb9d1;font-size:11px;letter-spacing:1.15px;text-transform:uppercase;font-weight:750;margin-bottom:5px}
     .list-question .question-preview{font-size:14px}
+    .list-section{grid-column:1/-1;color:#ffd0e0;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:750;padding:9px 3px 4px}
     .no-results{grid-column:1/-1;text-align:center;color:#d9bfd0;padding:20px}
     .footer{text-align:center;padding:0 0 32px;font-size:12px;color:#c9a9c0;letter-spacing:.5px}
     dialog{width:min(670px,calc(100% - 30px));max-height:min(90dvh,900px);overflow:auto;border:1px solid rgba(255,255,255,.25);border-radius:26px;padding:0;background:linear-gradient(145deg,#432342,#2a192f 77%);box-shadow:0 35px 100px #0c0610aa;color:white}
@@ -133,28 +135,31 @@
   <div class="page" id="top">
     <header class="topbar">
       <a class="brand" href="#top" aria-label="Afterglow home"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#52213d" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.6 5.6 0 0 0-7.9 0l-.9.9-.9-.9a5.6 5.6 0 0 0-7.9 7.9l.9.9L12 21l7.9-7.6.9-.9a5.6 5.6 0 0 0 0-7.9Z"/></svg></span> afterglow<span style="color:#ffaec6">.</span></a>
-      <div class="top-actions"><span class="count" id="topCount">100 LITTLE SECRETS</span><button class="edit-trigger" id="openEditor" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L10 16l-4 1 1-4 9.5-9.5Z"/></svg><span>Edit questions</span></button></div>
+      <div class="top-actions"><span class="count" id="topCount">279 LITTLE SECRETS</span><button class="edit-trigger" id="openEditor" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L10 16l-4 1 1-4 9.5-9.5Z"/></svg><span>Edit questions</span></button></div>
     </header>
     <main>
-      <section class="hero" aria-label="Introduction"><p class="eyebrow">A little game for closer hearts</p><h1>Truth looks <em>good</em> on you.</h1><p class="subtitle">Some questions are sweet. Some are daring. All are worth asking. ♡</p></section>
+      <section class="hero" aria-label="Introduction"><p class="personal-title">Kayaaa</p><p class="eyebrow">A little game for closer hearts</p><h1>Truth looks <em>good</em> on you.</h1><p class="subtitle">Some questions are sweet. Some are daring. All are worth asking. ♡</p></section>
       <nav class="category-bar" aria-label="Question categories">
-        <button class="category" type="button" data-category="truth" aria-pressed="true">♡ All truths</button>
-        <button class="category" type="button" data-category="sweet" aria-pressed="false">Sweet</button>
-        <button class="category" type="button" data-category="spicy" aria-pressed="false">Spicy</button>
-        <button class="category" type="button" data-category="funny" aria-pressed="false">Funny</button>
-        <button class="category" type="button" data-category="group" aria-pressed="false">Group</button>
-        <button class="category" type="button" data-category="dares" aria-pressed="false">Dares</button>
+        <button class="category" type="button" data-category="featured" aria-pressed="true">♡ Main 100</button>
+        <button class="category" type="button" data-category="all" aria-pressed="false">All questions</button>
+        <button class="category" type="button" data-category="flirty" aria-pressed="false">Flirty</button>
+        <button class="category" type="button" data-category="funnyDirty" aria-pressed="false">Funny dirty</button>
+        <button class="category" type="button" data-category="juicy" aria-pressed="false">Juicy</button>
+        <button class="category" type="button" data-category="romantic" aria-pressed="false">Romantic</button>
+        <button class="category" type="button" data-category="never" aria-pressed="false">Never have I ever</button>
+        <button class="category" type="button" data-category="sex" aria-pressed="false">Intimacy</button>
+        <button class="category" type="button" data-category="original" aria-pressed="false">Original 100</button>
       </nav>
       <section class="stage" aria-label="Question game">
         <article class="prompt-card" id="promptCard" aria-live="polite" aria-atomic="true">
-          <div class="card-top"><span class="tag"><span class="dot"></span><span id="cardType">TRUTH · SWEET</span></span><span class="card-number" id="cardNumber">01 / 100</span></div>
-          <div class="question-wrap"><h2 class="question" id="question">What was your first crush, and do you still remember why?</h2></div>
+          <div class="card-top"><span class="tag"><span class="dot"></span><span id="cardType">TRUTH · FLIRTY</span></span><span class="card-number" id="cardNumber">01 / 279</span></div>
+          <div class="question-wrap"><h2 class="question" id="question">Who was your first celebrity crush?</h2></div>
           <div class="card-bottom"><span>✦ &nbsp; Honest answers, soft hearts.</span><button class="icon-button" type="button" id="copyQuestion" aria-label="Copy this question" title="Copy question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></button></div>
         </article>
-        <div class="controls"><button class="round-button" id="previous" type="button" aria-label="Previous question" disabled title="Previous question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="main-button" type="button" id="next">Another question ♡</button><button class="round-button" id="shuffle" type="button" aria-label="Shuffle is on" aria-pressed="true" title="Turn shuffle off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h3c7 0 7-12 14-12h3"/><path d="M2 6h3c3.5 0 5.2 3 6.8 6"/><path d="M14 16c1.2 1.2 2.4 2 5 2h3"/></svg></button></div>
-        <div class="small-tools"><span id="poolCount">80 truth questions</span><span class="tiny-spark">✦</span><button class="plain-button" id="browseLink" type="button">Browse all 100 questions</button><span class="tiny-spark">✦</span><span>Press <strong>→</strong> for next</span></div>
+        <div class="controls"><button class="round-button" id="previous" type="button" aria-label="Previous question" disabled title="Previous question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="main-button" type="button" id="next">Another question ♡</button><button class="round-button" id="shuffle" type="button" aria-label="Shuffle is off" aria-pressed="false" title="Turn shuffle on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h3c7 0 7-12 14-12h3"/><path d="M2 6h3c3.5 0 5.2 3 6.8 6"/><path d="M14 16c1.2 1.2 2.4 2 5 2h3"/></svg></button></div>
+        <div class="small-tools"><span id="poolCount">100 featured questions</span><span class="tiny-spark">✦</span><button class="plain-button" id="browseLink" type="button">Browse all 279 questions</button><span class="tiny-spark">✦</span><span>Press <strong>→</strong> for next</span></div>
       </section>
-      <details class="browse" id="browse"><summary><span><strong>The whole heart-to-heart collection</strong><small>Every truth, every dare — pick your favorite.</small></span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="browse-inner"><input class="search" id="search" type="search" placeholder="Search all questions…" aria-label="Search questions"><div class="question-list" id="questionList"></div></div></details>
+      <details class="browse" id="browse"><summary><span><strong>The whole heart-to-heart collection</strong><small>Questions 1–100 are featured; the rest follow below.</small></span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="browse-inner"><input class="search" id="search" type="search" placeholder="Search all questions…" aria-label="Search questions"><div class="question-list" id="questionList"></div></div></details>
     </main>
     <footer class="footer">Made for late-night talks, stolen glances & a little courage. ♡</footer>
   </div>
@@ -163,14 +168,210 @@
     <div class="editor-body">
       <div class="edit-tabs" role="tablist" aria-label="Edit mode"><button class="edit-tab" id="singleTab" role="tab" type="button" aria-selected="true">This question</button><button class="edit-tab" id="bulkTab" role="tab" type="button" aria-selected="false">Bulk paste</button></div>
       <section id="singlePanel" role="tabpanel" aria-labelledby="singleTab"><label class="field-label" for="singleText">Edit the question currently on screen</label><textarea id="singleText" class="editor-textarea" rows="5" maxlength="500" spellcheck="true"></textarea><div class="action-row"><button class="save-button" id="saveSingle" type="button">Save this question</button></div></section>
-      <section id="bulkPanel" role="tabpanel" aria-labelledby="bulkTab" class="hidden"><label class="field-label" for="editCategory">Which questions should be replaced?</label><select id="editCategory"><option value="sweet">Sweet truths</option><option value="spicy">Spicy truths</option><option value="funny">Funny truths</option><option value="group">Group truths</option><option value="dares">Flirty dares</option><option value="all">All 100 questions (20 per category)</option></select><p class="help">One question per line. You can paste numbered lists like “1. Your question?”. For all 100, paste exactly 100 lines, ordered Sweet → Spicy → Funny → Group → Dares.</p><textarea id="bulkText" class="editor-textarea large" spellcheck="true" placeholder="1. What's your favorite memory with me?&#10;2. What do you want to ask me?&#10;3. ..."></textarea><div class="action-row"><button class="save-button" id="saveBulk" type="button">Apply pasted questions</button><span class="help" id="lineCount" style="margin:0">20 questions</span></div></section>
+      <section id="bulkPanel" role="tabpanel" aria-labelledby="bulkTab" class="hidden"><label class="field-label" for="editCategory">Which questions should be replaced?</label><select id="editCategory"><option value="featured">Main 100 questions</option><option value="flirty">Flirty (30)</option><option value="funnyDirty">Funny dirty (29)</option><option value="juicy">Juicy (30)</option><option value="romantic">Romantic (30)</option><option value="never">Never have I ever (30)</option><option value="sex">Intimacy (30)</option><option value="sweet">Original sweet (20)</option><option value="spicy">Original spicy (20)</option><option value="funny">Original funny (20)</option><option value="group">Original group (20)</option><option value="dares">Original dares (20)</option><option value="all">Every question (all)</option></select><p class="help">One question per line. You can paste numbered lists like “1. Your question?”. The Main 100 and Every question options require the exact number of lines shown; individual categories can have any length.</p><textarea id="bulkText" class="editor-textarea large" spellcheck="true" placeholder="1. What's your favorite memory with me?&#10;2. What do you want to ask me?&#10;3. ..."></textarea><div class="action-row"><button class="save-button" id="saveBulk" type="button">Apply pasted questions</button><span class="help" id="lineCount" style="margin:0">100 questions</span></div></section>
       <p class="editor-notice" id="editorNotice" role="status"></p>
       <hr class="editor-divider">
       <div class="export-block"><div><h3>Taking it to GitHub?</h3><p>Your edits save in this browser. Download the updated website to make them permanent for everyone, then replace your GitHub repository’s <code>index.html</code>.</p></div><div class="export-buttons"><button type="button" class="secondary-button" id="downloadSite">Download HTML</button></div></div>
-      <div style="margin-top:19px"><button class="reset-button" id="resetQuestions" type="button">Restore all original questions</button></div>
+      <div style="margin-top:19px"><button class="reset-button" id="resetQuestions" type="button">Restore all default questions</button></div>
     </div>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="application/json" id="new-question-data">
+  {
+    "flirty": [
+      "Who was your first celebrity crush?",
+      "What about your first crush IRL?",
+      "Favorite ways to flirt with someone?",
+      "What's your biggest turn-on?",
+      "What about turn-off?",
+      "Big spoon or little spoon?",
+      "Do you like when someone else makes the first move?",
+      "What's a green flag for you on a first date?",
+      "Best dating advice you've ever been given?",
+      "Have you ever been on a blind date?",
+      "What's the best kiss you've ever had?",
+      "What's the best date you've ever been on?",
+      "Favorite way to be affectionate with someone?",
+      "Favorite place to be touched?",
+      "What's your favorite type of foreplay?",
+      "What's something that gives you butterflies?",
+      "What do you think your hottest quality is?",
+      "What makes you feel most alive?",
+      "First date kisses: Yay or nay?",
+      "What about sex on the first date?",
+      "Top, bottom, or both?",
+      "What's on your ideal sexy playlist?",
+      "Do you like it rough or sensual?",
+      "What's a sexy gift you'd love to receive?",
+      "How do you feel about sex toys?",
+      "Think you can guess what I'm wearing right now?",
+      "What's the hottest thing someone can say to you in bed?",
+      "Do you prefer to give or receive?",
+      "What's something you secretly fantasize about?",
+      "If you could make out with me anywhere in the world, where would it be?"
+    ],
+    "funnyDirty": [
+      "What turns you on the most? (Besides me, of course)",
+      "If you could describe your sex life with an emoji, what would it be?",
+      "What about an animal?",
+      "If you had $1 for every person you've kissed, what could you buy?",
+      "Strangest item you've ever considered using as a sex toy?",
+      "Funniest thing that's ever happened during sex?",
+      "Most outrageous sex dream you've ever had?",
+      "Do you ever go commando?",
+      "What's the naughtiest thing you've ever done?",
+      "Was it worth it?",
+      "Would you give your enemy a lap dance for $1 million?",
+      "If you could make three sexy wishes, what would they be?",
+      "Worst pickup line someone has ever used on you?",
+      "If you're with your parents and a sex scene comes on, what's the first thing you do?",
+      "Unfortunately, you're being forced to choose one sex position for the rest of your life. What is it?",
+      "What sexy thing could you win a world record for?",
+      "Most inconvenient place you've ever been turned on?",
+      "Let's place a bet: How long do you think you can last if I…[insert sexy thing here]?",
+      "On a scale of one to Mount Everest, how high is your sex drive?",
+      "If you could create a sex toy and name it, what would it be?",
+      "What's the hottest nickname I can call you in bed?",
+      "Think fast! One-night stand…do you sleep over or leave?",
+      "What sport best describes your sex life?",
+      "What actor would you pick to play you in a steamy rom-com?",
+      "What sex position could you give a masterclass on?",
+      "If your body was a plant, how many times a day would I have to water it?",
+      "What's the most embarrassing thing you've ever done to get a crush's attention?",
+      "I'm hungry. Can I taste you?",
+      "Oops, I forgot to [insert chore here]. Want to punish me later?"
+    ],
+    "juicy": [
+      "What initially attracted you to me?",
+      "How (or when) did you know you wanted to date me?",
+      "Would you change anything about the way we met?",
+      "In general, do you feel like you fall for people easily?",
+      "What's something people would be surprised to know about you?",
+      "What's your favorite thing about yourself?",
+      "If you could change something about your life right now, what would it be?",
+      "What's the most difficult thing you've had to go through?",
+      "Have you ever been in love?",
+      "Why did things end with your last ex?",
+      "What's one of your dating deal-breakers?",
+      "What's a red flag for you in a relationship?",
+      "What's something that gives you the \"ick\"?",
+      "Is there anything about the future that scares you?",
+      "Do you tend to follow your head or your heart?",
+      "If you could go back in time to any year of your life, what would it be?",
+      "What's your biggest guilty pleasure?",
+      "What's the biggest risk you've ever taken?",
+      "What's the last thing you searched on Google?",
+      "The most forbidden person you've ever had a crush on?",
+      "What's the wildest thing you've ever done for love?",
+      "Hardest decision you've ever had to make?",
+      "What advice would you give your younger self?",
+      "What's the biggest lesson you've learned in our relationship?",
+      "If you could change something about our relationship, what would it be?",
+      "How do you feel about open relationships?",
+      "Do you think a relationship can come back from cheating?",
+      "Do you want to have a family someday?",
+      "Why or why not?",
+      "What's something you've always wanted to ask me but haven't?"
+    ],
+    "romantic": [
+      "What was your first impression of me?",
+      "What's your idea of a perfect date with me?",
+      "What's your favorite love song?",
+      "Favorite rom-com?",
+      "What's your love language?",
+      "How do you like to give love?",
+      "How do you like to receive love?",
+      "How do you feel about PDA?",
+      "What's your favorite type of kiss?",
+      "How do you like to be celebrated?",
+      "What's your favorite memory of us together?",
+      "Best date we've been on together?",
+      "What's your favorite thing about our relationship?",
+      "What does an ideal relationship look like to you?",
+      "What makes you feel close to me?",
+      "What's the most romantic thing you've ever done for someone?",
+      "What's the most romantic thing someone has ever done for you?",
+      "What do you value most in a relationship?",
+      "What's your favorite non-physical thing about me?",
+      "Do you believe in soulmates?",
+      "Do you believe in love at first sight?",
+      "Best relationship advice you've ever been given?",
+      "When do you feel the most romantic?",
+      "What do you think we have in common?",
+      "What's a hobby or activity we should try together?",
+      "If you had to describe our romance in one word, what would it be?",
+      "What's your favorite way for us to connect?",
+      "If you could plan a fun weekend for us anywhere in the world, where would we go?",
+      "What's a life lesson you've picked up from our relationship?",
+      "When it comes to our future, what are you most excited about?"
+    ],
+    "never": [
+      "Never have I ever sent nudes to someone.",
+      "Never have I ever had sex in a public place.",
+      "Never have I ever been caught hooking up with someone.",
+      "Never have I ever had phone sex.",
+      "Never have I ever made a sexy tape.",
+      "Never have I ever had a threesome.",
+      "Never have I ever tried sexy role-play.",
+      "Never have I ever accidentally sent nudes to the wrong person.",
+      "Never have I ever texted my ex on a major holiday.",
+      "Never have I ever lost a sexy bet.",
+      "Never have I ever had a sneaky link.",
+      "Never have I ever gone skinny dipping.",
+      "Never have I ever kissed more than one person in 24 hours.",
+      "Never have I ever had a one-night stand.",
+      "Never have I ever sexted someone while at work.",
+      "Never have I ever fallen asleep during sex.",
+      "Never have I ever lied to a date about my age.",
+      "Never have I ever gone to a strip club.",
+      "Never have I ever played strip poker.",
+      "Never have I ever ghosted someone after a first date.",
+      "Never have I ever accidentally liked my ex's photo while stalking them on social media.",
+      "Never have I ever given or received a lap dance.",
+      "Never have I ever used handcuffs or props during sex.",
+      "Never have I ever been engaged or proposed to.",
+      "Never have I ever dated two or more people at once.",
+      "Never have I ever been to a nude beach.",
+      "Never have I ever visited a sex shop.",
+      "Never have I ever been part of the mile-high club.",
+      "Never have I ever used food in a sexy way in bed.",
+      "Never have I ever touched myself in public."
+    ],
+    "sex": [
+      "Where (or from who) did you learn about sex growing up?",
+      "What's something you wish people knew about sex?",
+      "What's your favorite way to be intimate with someone?",
+      "How often do you like to be intimate?",
+      "How important is sex to you in a relationship?",
+      "How do you like to be touched?",
+      "What's your favorite part about sex?",
+      "Most challenging part about sex?",
+      "What makes you feel closer to someone during sex?",
+      "Do you prefer morning or evening sex?",
+      "Lights on or off?",
+      "What do you want our sex life to look like?",
+      "What do you fantasize about when you masturbate?",
+      "Have you ever had dreams about sex?",
+      "Would you be interested in watching porn with me?",
+      "What's a sexual fantasy you've always wanted to try?",
+      "Would you ever have sex in public with me?",
+      "What's something you want to try with me in bed?",
+      "What gets you off more: oral or penetrative sex?",
+      "What sex scene would you want to reenact together?",
+      "Have you ever tried BDSM?",
+      "If we were in a sex shop right now, what three items would you buy for us?",
+      "Have you ever wanted to try something with me but were afraid to ask?",
+      "In an ideal world, how long would foreplay be?",
+      "Does the thought of recording a sexy video turn you on?",
+      "What's the last thing you came to?",
+      "Do you tend to get tired or energized after sex?",
+      "Do you prefer to take control or be submissive?",
+      "What's your favorite thing about our sex life?",
+      "In your opinion, what's the difference between sex and making love?"
+    ]
+  }
+  </script>
 
   <script type="application/json" id="question-data">
   {
@@ -289,16 +490,18 @@
   <script>
     (() => {
       'use strict';
-      const groups = ['sweet', 'spicy', 'funny', 'group', 'dares'];
-      const names = {sweet:'Sweet',spicy:'Spicy',funny:'Funny',group:'Group',dares:'Dare'};
-      const builtIn = JSON.parse(document.getElementById('question-data').textContent);
+      const newGroups = ['flirty', 'funnyDirty', 'juicy', 'romantic', 'never', 'sex'];
+      const originalGroups = ['sweet', 'spicy', 'funny', 'group', 'dares'];
+      const groups = [...newGroups, ...originalGroups];
+      const names = {flirty:'Flirty',funnyDirty:'Funny dirty',juicy:'Juicy',romantic:'Romantic',never:'Never have I ever',sex:'Intimacy',sweet:'Original sweet',spicy:'Original spicy',funny:'Original funny',group:'Original group',dares:'Original dares'};
+      const builtIn = {...JSON.parse(document.getElementById('new-question-data').textContent),...JSON.parse(document.getElementById('question-data').textContent)};
       const clone = value => JSON.parse(JSON.stringify(value));
       const hash = value => {let h=2166136261;for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0).toString(36)};
       const storageKey = 'afterglow-questions-' + hash(JSON.stringify(builtIn));
       const safeRead = () => {try { const value=JSON.parse(localStorage.getItem(storageKey));if(value&&groups.every(g=>Array.isArray(value[g])&&value[g].every(s=>typeof s==='string')))return value; } catch(e){} return clone(builtIn);};
       let bank=safeRead();
-      let category='truth';
-      let shuffle=true;
+      let category='featured';
+      let shuffle=false;
       let history=[];
       let position=-1;
       let active=null;
@@ -306,7 +509,7 @@
       let animationTimer;
       const $ = id => document.getElementById(id);
       const all = () => groups.flatMap(group=>bank[group].map((text,index)=>({group,index,text,id:group+':'+index})));
-      const pool = () => all().filter(item=>category==='truth'?item.group!=='dares':item.group===category);
+      const pool = () => {const items=all();if(category==='featured')return items.slice(0,100);if(category==='all')return items;if(category==='original')return items.filter(item=>originalGroups.includes(item.group));return items.filter(item=>item.group===category)};
       const format = n => String(n).padStart(2,'0');
       const total = () => groups.reduce((sum,g)=>sum+bank[g].length,0);
       const notify = message => {const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2500)};
@@ -317,10 +520,10 @@
         active=item.id;
         const set=()=>{
           $('question').textContent=item.text;
-          $('cardType').textContent=(item.group==='dares'?'DARE':'TRUTH')+' · '+names[item.group].toUpperCase();
+          $('cardType').textContent=item.group==='never'?'NEVER HAVE I EVER':(item.group==='dares'?'DARE':'TRUTH')+' · '+names[item.group].toUpperCase();
           $('cardNumber').textContent=format(items.findIndex(x=>x.id===active)+1)+' / '+format(items.length);
           $('previous').disabled=position<=0;
-          $('poolCount').textContent=pool().length+' '+(category==='dares'?'dares':category==='truth'?'truth questions':'questions');
+          $('poolCount').textContent=pool().length+' '+(category==='featured'?'featured questions':category==='original'?'original prompts':category==='dares'?'dares':'questions');
           $('topCount').textContent=total()+' LITTLE SECRETS';
           $('browseLink').textContent='Browse all '+total()+' questions';
           $('question').classList.remove('out');
@@ -332,12 +535,12 @@
       function restart(preferredId){const items=pool();history=[];position=-1;active=null;if(items.length)choose(preferredId&&items.some(x=>x.id===preferredId)?preferredId:items[0].id,false);else draw();}
       function next(){if(position<history.length-1){position++;choose(history[position],true,false);return;}const items=pool();if(!items.length)return;let candidate;if(shuffle){const available=items.filter(x=>x.id!==active);const options=available.length?available:items;candidate=options[Math.floor(Math.random()*options.length)];}else{const i=items.findIndex(x=>x.id===active);candidate=items[(i+1)%items.length];}choose(candidate.id);}
       function setCategory(value,preferredId){category=value;document.querySelectorAll('[data-category]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.category===value)));restart(preferredId);}
-      function renderBrowse(){const query=$('search').value.trim().toLowerCase();const list=$('questionList');list.replaceChildren();const items=all();let matches=0;items.forEach((item,i)=>{if(query&&!item.text.toLowerCase().includes(query)&&!names[item.group].toLowerCase().includes(query)&&!String(i+1).includes(query))return;matches++;const button=document.createElement('button');button.type='button';button.className='list-question';const small=document.createElement('small');small.textContent='#'+format(i+1)+' · '+(item.group==='dares'?'Dare':names[item.group]+' truth');const span=document.createElement('span');span.className='question-preview';span.textContent=item.text;button.append(small,span);button.addEventListener('click',()=>{$('browse').open=false;setCategory(item.group==='dares'?'dares':'truth',item.id);$('promptCard').scrollIntoView({behavior:'smooth',block:'center'})});list.appendChild(button)});if(!matches){const empty=document.createElement('p');empty.className='no-results';empty.textContent='No matching questions yet ♡';list.appendChild(empty)}}
+      function renderBrowse(){const query=$('search').value.trim().toLowerCase();const list=$('questionList');list.replaceChildren();const items=all();let matches=0;let previousSection='';items.forEach((item,i)=>{if(query&&!item.text.toLowerCase().includes(query)&&!names[item.group].toLowerCase().includes(query)&&!String(i+1).includes(query))return;const section=i<100?'Main questions · 1–100':i<179?'More new questions · 101–179':'Original collection · 180–279';if(section!==previousSection){const heading=document.createElement('div');heading.className='list-section';heading.textContent=section;list.appendChild(heading);previousSection=section;}matches++;const button=document.createElement('button');button.type='button';button.className='list-question';const small=document.createElement('small');small.textContent='#'+format(i+1)+' · '+names[item.group];const span=document.createElement('span');span.className='question-preview';span.textContent=item.text;button.append(small,span);button.addEventListener('click',()=>{$('browse').open=false;setCategory('all',item.id);$('promptCard').scrollIntoView({behavior:'smooth',block:'center'})});list.appendChild(button)});if(!matches){const empty=document.createElement('p');empty.className='no-results';empty.textContent='No matching questions yet ♡';list.appendChild(empty)}}
       function persist(){try{localStorage.setItem(storageKey,JSON.stringify(bank));return true}catch(e){return false}}
       function updateBank(){persist();restart();renderBrowse();$('editorNotice').textContent='Saved! Your new questions are ready ♡';notify('Questions updated ♡')}
       function openEditor(){$('editorNotice').textContent='';$('singleText').value=all().find(x=>x.id===active)?.text||'';$('editorDialog').showModal()}
       function setEditTab(single){$('singlePanel').classList.toggle('hidden',!single);$('bulkPanel').classList.toggle('hidden',single);$('singleTab').setAttribute('aria-selected',String(single));$('bulkTab').setAttribute('aria-selected',String(!single));$('editorNotice').textContent='';if(!single)fillBulk();}
-      function fillBulk(){const g=$('editCategory').value;const questions=g==='all'?all().map(x=>x.text):bank[g];$('bulkText').value=questions.map((text,i)=>(i+1)+'. '+text).join('\n');countLines()}
+      function fillBulk(){const g=$('editCategory').value;const questions=g==='all'?all().map(x=>x.text):g==='featured'?all().slice(0,100).map(x=>x.text):bank[g];$('bulkText').value=questions.map((text,i)=>(i+1)+'. '+text).join('\n');countLines()}
       function parseLines(text){return text.split(/\r?\n/).map(line=>line.trim().replace(/^\s*(?:\d{1,4}[.)\-:]\s*|[-•*]\s+)/,'').trim()).filter(Boolean)}
       function countLines(){const count=parseLines($('bulkText').value).length;$('lineCount').textContent=count+' question'+(count===1?'':'s')+' ready'}
       document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.category)));
@@ -355,9 +558,9 @@
       $('editCategory').addEventListener('change',fillBulk);
       $('bulkText').addEventListener('input',countLines);
       $('saveSingle').addEventListener('click',()=>{const text=$('singleText').value.trim();if(!text||text.length>500){$('editorNotice').textContent='Please enter a question (up to 500 characters).';return;}const item=all().find(x=>x.id===active);if(!item){$('editorNotice').textContent='Add a question in Bulk paste first.';return;}bank[item.group][item.index]=text;persist();draw();renderBrowse();$('editorNotice').textContent='Saved! Your new question is on the card ♡';notify('Question updated ♡')});
-      $('saveBulk').addEventListener('click',()=>{const items=parseLines($('bulkText').value);const target=$('editCategory').value;if(!items.length||items.some(s=>s.length>500)||items.length>500){$('editorNotice').textContent='Use between 1 and 500 nonempty lines, each under 500 characters.';return;}if(target==='all'){if(items.length!==100){$('editorNotice').textContent='To replace all five groups at once, paste exactly 100 questions (20 for each group).';return;}groups.forEach((g,i)=>bank[g]=items.slice(i*20,(i+1)*20));}else{bank[target]=items;}updateBank()});
-      $('downloadSite').addEventListener('click',()=>{const doc=document.documentElement.cloneNode(true);const embedded=doc.querySelector('#question-data');embedded.textContent=JSON.stringify(bank,null,2).replace(/</g,'\\u003c');const html='<!doctype html>\n'+doc.outerHTML;const blob=new Blob([html],{type:'text/html;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='index.html';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Updated index.html downloaded ♡')});
-      $('resetQuestions').addEventListener('click',()=>{if(!confirm('Restore all 100 original questions? Your changes in this browser will be removed.'))return;bank=clone(builtIn);try{localStorage.removeItem(storageKey)}catch(e){}setCategory('truth');fillBulk();$('singleText').value=bank.sweet[0];renderBrowse();$('editorNotice').textContent='All original questions are back ♡';notify('Original questions restored')});
+      $('saveBulk').addEventListener('click',()=>{const items=parseLines($('bulkText').value);const target=$('editCategory').value;if(!items.length||items.some(s=>s.length>500)||items.length>500){$('editorNotice').textContent='Use between 1 and 500 nonempty lines, each under 500 characters.';return;}if(target==='all'){if(items.length!==total()){$('editorNotice').textContent='To replace everything, paste exactly '+total()+' questions.';return;}let offset=0;groups.forEach(g=>{const length=bank[g].length;bank[g]=items.slice(offset,offset+length);offset+=length});}else if(target==='featured'){const featured=all().slice(0,100);if(items.length!==featured.length){$('editorNotice').textContent='To replace the Main 100, paste exactly '+featured.length+' questions.';return;}featured.forEach((item,i)=>bank[item.group][item.index]=items[i]);}else{bank[target]=items;}updateBank()});
+      $('downloadSite').addEventListener('click',()=>{const doc=document.documentElement.cloneNode(true);const fresh={};const originals={};newGroups.forEach(g=>fresh[g]=bank[g]);originalGroups.forEach(g=>originals[g]=bank[g]);doc.querySelector('#new-question-data').textContent=JSON.stringify(fresh,null,2).replace(/</g,'\\u003c');doc.querySelector('#question-data').textContent=JSON.stringify(originals,null,2).replace(/</g,'\\u003c');const html='<!doctype html>\n'+doc.outerHTML;const blob=new Blob([html],{type:'text/html;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='index.html';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Updated index.html downloaded ♡')});
+      $('resetQuestions').addEventListener('click',()=>{if(!confirm('Restore all 279 default questions? Your changes in this browser will be removed.'))return;bank=clone(builtIn);try{localStorage.removeItem(storageKey)}catch(e){}setCategory('featured');fillBulk();$('singleText').value=bank.flirty[0];renderBrowse();$('editorNotice').textContent='All default questions are back ♡';notify('Default questions restored')});
       document.addEventListener('keydown',event=>{if($('editorDialog').open||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(event.key==='ArrowRight'){event.preventDefault();next()}if(event.key==='ArrowLeft'&&position>0){event.preventDefault();position--;choose(history[position],true,false)}});
       if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){let scheduled=false;let x=0,y=0;window.addEventListener('pointermove',event=>{x=(event.clientX/window.innerWidth-.5)*22;y=(event.clientY/window.innerHeight-.5)*22;if(!scheduled){scheduled=true;requestAnimationFrame(()=>{document.documentElement.style.setProperty('--mouse-x',x+'px');document.documentElement.style.setProperty('--mouse-y',y+'px');scheduled=false})}},{passive:true})}
       restart();renderBrowse();
