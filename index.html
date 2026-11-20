@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#26122f">
+  <meta name="description" content="100 sweet, spicy, funny, and flirty Truth or Dare prompts. Ask a little, feel a lot.">
+  <title>Afterglow — Truth or Dare</title>
+  <style>
+    :root{color-scheme:dark;--ink:#fff6f5;--muted:#d7bfce;--rose:#ffc7d3;--hot:#ff83ae;--glass:rgba(255,244,250,.105);--stroke:rgba(255,238,247,.19);--radius:31px}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-width:320px;min-height:100dvh;color:var(--ink);font-family:Arial,Helvetica,sans-serif;background:#24112e;overflow-x:hidden}
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #ffe2b9;outline-offset:4px}
+    ::selection{background:#f68fb8;color:#271125}
+    .ambient{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse at 22% 22%,#743251 0%,transparent 37%),radial-gradient(ellipse at 88% 83%,#5c315f 0%,transparent 42%),linear-gradient(137deg,#2b142f,#361935 48%,#221126)}
+    .ambient::before{content:"";position:absolute;inset:-10%;opacity:.32;background-image:radial-gradient(#fddce6 0.8px,transparent 0.8px);background-size:32px 32px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+    .ambient::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 26%,rgba(21,8,25,.29) 100%)}
+    .jelly{position:absolute;border:1px solid rgba(255,238,251,.22);filter:drop-shadow(0 18px 34px rgba(15,3,31,.28));box-shadow:inset 21px 26px 29px rgba(255,255,255,.13),inset -26px -27px 30px rgba(45,9,73,.22),0 0 50px rgba(245,129,180,.10);border-radius:55% 45% 58% 42%/50% 57% 43% 50%;animation:squish 11s ease-in-out infinite alternate,drift 13s ease-in-out infinite alternate;will-change:transform,border-radius}
+    .jelly::before{content:"";position:absolute;inset:12% 46% 56% 17%;border-radius:50%;transform:rotate(-32deg);background:rgba(255,255,255,.39);filter:blur(14px)}
+    .jelly-one{width:410px;height:395px;left:-155px;top:21%;background:radial-gradient(circle at 30% 25%,rgba(255,199,212,.69),rgba(244,100,158,.36) 48%,rgba(118,53,158,.23) 82%);--shift-x:13px;--shift-y:-16px}
+    .jelly-two{width:355px;height:355px;right:-115px;top:6%;animation-delay:-4s;background:radial-gradient(circle at 29% 25%,rgba(251,194,225,.76),rgba(194,115,201,.3) 48%,rgba(105,65,165,.28));--shift-x:-16px;--shift-y:23px}
+    .jelly-three{width:240px;height:230px;right:7%;bottom:-130px;animation-delay:-7s;background:radial-gradient(circle at 30% 30%,rgba(255,220,180,.65),rgba(238,113,156,.37) 60%,rgba(178,84,169,.2));--shift-x:-8px;--shift-y:-17px}
+    @keyframes squish{0%{border-radius:55% 45% 58% 42%/50% 57% 43% 50%}50%{border-radius:43% 57% 37% 63%/59% 42% 58% 41%}100%{border-radius:62% 38% 54% 46%/41% 57% 43% 59%}}
+    @keyframes drift{from{transform:translate3d(calc(var(--shift-x) * -1 + var(--mouse-x,0px)),calc(var(--shift-y) * -1 + var(--mouse-y,0px)),0) rotate(-8deg)}to{transform:translate3d(calc(var(--shift-x) + var(--mouse-x,0px)),calc(var(--shift-y) + var(--mouse-y,0px)),0) rotate(9deg)}}
+    .spark{position:absolute;color:#ffe4ed;opacity:.5;animation:bob 8s ease-in-out infinite}
+    .spark-a{left:19%;top:11%;font-size:24px}.spark-b{right:21%;top:26%;font-size:15px;animation-delay:-3s}.spark-c{left:15%;bottom:12%;font-size:12px;animation-delay:-5s}.spark-d{right:13%;bottom:27%;font-size:23px;animation-delay:-1.5s}
+    @keyframes bob{50%{transform:translateY(-26px) rotate(15deg);opacity:.22}}
+    .page{width:min(1120px,calc(100% - 56px));margin:auto;position:relative;z-index:1}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:31px 0 17px}
+    .brand{display:inline-flex;align-items:center;gap:11px;color:white;text-decoration:none;font-family:Georgia,'Times New Roman',serif;font-size:27px;letter-spacing:-1.3px}
+    .brand .mark{height:33px;width:33px;display:grid;place-items:center;background:linear-gradient(145deg,#ffb9ce,#f07da9);border-radius:12px;transform:rotate(-12deg);box-shadow:0 8px 22px #ff82a744}
+    .brand .mark svg{width:21px;height:21px;transform:rotate(12deg)}
+    .top-actions{display:flex;align-items:center;gap:16px}
+    .count{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#efc9dd;font-weight:700;white-space:nowrap}
+    .edit-trigger{border:1px solid var(--stroke);background:rgba(255,255,255,.08);color:#fff4f7;border-radius:100px;padding:11px 18px;display:flex;align-items:center;gap:9px;transition:background .2s,transform .2s}
+    .edit-trigger:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+    .edit-trigger svg{width:17px;height:17px}
+    .hero{text-align:center;padding:38px 0 25px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;margin:0 0 13px;color:#ffbfd3;font-size:12px;font-weight:750;letter-spacing:3.2px;text-transform:uppercase}
+    .eyebrow::before,.eyebrow::after{content:"✦";font-size:13px;color:#ffd7a3}
+    h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(43px,6.1vw,79px);font-weight:400;letter-spacing:-2.9px;line-height:1.03;margin:0 auto 14px;text-wrap:balance;max-width:850px;text-shadow:0 12px 35px #20102433}
+    h1 em{color:#ffb4c8;font-weight:400}
+    .subtitle{color:#e8c9d7;font-size:16px;line-height:1.55;margin:0}
+    .category-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:28px auto 21px}
+    .category{border:1px solid rgba(255,239,249,.2);border-radius:999px;padding:11px 17px;color:#eddce8;background:rgba(255,255,255,.06);transition:.2s;white-space:nowrap;font-size:14px;font-weight:650}
+    .category:hover{background:rgba(255,255,255,.13)}
+    .category[aria-pressed="true"]{background:#ffb9ce;color:#451b38;border-color:#ffb9ce;box-shadow:0 8px 30px #ff92b349}
+    .stage{max-width:850px;margin:0 auto}
+    .prompt-card{position:relative;overflow:hidden;min-height:370px;border:1px solid rgba(255,245,253,.27);border-radius:var(--radius);background:linear-gradient(143deg,rgba(255,235,248,.19),rgba(255,255,255,.075) 46%,rgba(248,191,222,.105));box-shadow:0 27px 85px rgba(17,5,30,.34),inset 0 1px rgba(255,255,255,.16);backdrop-filter:blur(23px);-webkit-backdrop-filter:blur(23px);padding:35px 43px 30px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;isolation:isolate}
+    .prompt-card::before{content:"";position:absolute;z-index:-1;width:490px;height:490px;left:-220px;bottom:-440px;background:#f79cc4;filter:blur(75px);opacity:.46}
+    .prompt-card::after{content:"";position:absolute;z-index:-1;width:360px;height:360px;right:-220px;top:-270px;background:#ffc79e;filter:blur(70px);opacity:.22}
+    .card-top{display:flex;align-items:center;justify-content:space-between;width:100%;gap:15px}
+    .tag{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:1.7px;font-size:12px;font-weight:750;color:#ffe3ec}
+    .tag .dot{height:9px;width:9px;border-radius:50%;background:#ffb4c9;box-shadow:0 0 16px #ffb4c9}
+    .card-number{font-size:13px;letter-spacing:2px;color:#f3d7e6;font-variant-numeric:tabular-nums}
+    .question-wrap{padding:30px 5px;display:grid;place-items:center;flex:1}
+    .question{font-family:Georgia,'Times New Roman',serif;font-size:clamp(29px,4vw,46px);font-weight:400;line-height:1.24;letter-spacing:-.75px;max-width:715px;margin:0;text-wrap:balance;transition:opacity .2s,transform .2s}
+    .question.out{opacity:0;transform:translateY(12px) scale(.985)}
+    .card-bottom{width:100%;display:flex;justify-content:space-between;align-items:center;gap:10px;color:#ebcdda;font-size:13px}
+    .card-bottom span{display:inline-flex;gap:8px;align-items:center}
+    .icon-button{border:1px solid rgba(255,245,253,.16);background:rgba(255,255,255,.08);color:white;border-radius:100%;width:38px;height:38px;display:grid;place-items:center;transition:background .2s,transform .2s;flex:none}
+    .icon-button:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+    .icon-button svg{width:17px;height:17px}
+    .controls{display:flex;align-items:center;justify-content:center;gap:11px;margin:22px 0 17px}
+    .main-button{border:0;border-radius:100px;background:linear-gradient(120deg,#ffc5ce,#f79cbc);color:#45172e;font-size:16px;font-weight:800;box-shadow:0 13px 35px rgba(246,122,162,.27),inset 0 1px 0 #fff8;padding:18px 37px;min-width:235px;transition:transform .2s,box-shadow .2s}
+    .main-button:hover{transform:translateY(-3px);box-shadow:0 17px 39px rgba(246,122,162,.38)}
+    .round-button{height:54px;width:54px;border:1px solid rgba(255,238,247,.24);background:rgba(255,255,255,.1);backdrop-filter:blur(14px);color:#ffe9ef;border-radius:50%;display:grid;place-items:center;transition:.2s}
+    .round-button:hover:not(:disabled){background:rgba(255,255,255,.2);transform:translateY(-2px)}
+    .round-button:disabled{opacity:.35;cursor:not-allowed}
+    .round-button svg{width:21px;height:21px}
+    .small-tools{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px 20px;color:#ebd0dc;font-size:13px}
+    .plain-button{border:0;background:transparent;color:inherit;display:inline-flex;gap:8px;align-items:center;padding:7px 3px}
+    .plain-button:hover{text-decoration:underline;text-underline-offset:4px}
+    .plain-button svg{width:15px;height:15px}
+    .tiny-spark{color:#ffbdd1}
+    .browse{max-width:850px;margin:55px auto 75px;border:1px solid rgba(255,242,250,.17);border-radius:23px;background:rgba(255,255,255,.055);backdrop-filter:blur(10px)}
+    .browse summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:22px 28px}
+    .browse summary::-webkit-details-marker{display:none}
+    .browse summary strong{font-family:Georgia,serif;font-size:24px;font-weight:400}
+    .browse summary small{display:block;color:#ddbccc;font-size:13px;margin-top:6px}
+    .chevron{height:20px;width:20px;transition:transform .2s}.browse[open] .chevron{transform:rotate(180deg)}
+    .browse-inner{padding:0 27px 26px}
+    .search{width:100%;padding:14px 18px;border-radius:15px;background:rgba(24,9,32,.33);border:1px solid rgba(255,255,255,.19);color:#fff;outline:none;margin:8px 0 16px;font-size:15px}
+    .search::placeholder{color:#d0acbf}
+    .question-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-height:430px;overflow:auto;padding-right:4px}
+    .list-question{display:block;text-align:left;border:1px solid rgba(255,255,255,.115);background:rgba(255,255,255,.055);border-radius:14px;color:white;padding:14px 15px;transition:background .2s,border-color .2s;line-height:1.4}
+    .list-question:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.3)}
+    .list-question small{display:block;color:#ffb9d1;font-size:11px;letter-spacing:1.15px;text-transform:uppercase;font-weight:750;margin-bottom:5px}
+    .list-question .question-preview{font-size:14px}
+    .no-results{grid-column:1/-1;text-align:center;color:#d9bfd0;padding:20px}
+    .footer{text-align:center;padding:0 0 32px;font-size:12px;color:#c9a9c0;letter-spacing:.5px}
+    dialog{width:min(670px,calc(100% - 30px));max-height:min(90dvh,900px);overflow:auto;border:1px solid rgba(255,255,255,.25);border-radius:26px;padding:0;background:linear-gradient(145deg,#432342,#2a192f 77%);box-shadow:0 35px 100px #0c0610aa;color:white}
+    dialog::backdrop{background:rgba(18,7,28,.76);backdrop-filter:blur(9px)}
+    .editor-head{padding:27px 30px 17px;display:flex;gap:15px;justify-content:space-between;align-items:flex-start}
+    .editor-head h2{font:400 32px/1.1 Georgia,serif;margin:0 0 6px}
+    .editor-head p{margin:0;color:#e0c0d2;font-size:14px;line-height:1.55}
+    .close-button{border:1px solid #ffffff30;background:#ffffff17;color:white;border-radius:50%;width:37px;height:37px;font-size:23px;flex:none}
+    .editor-body{padding:5px 30px 30px}
+    .edit-tabs{display:flex;gap:8px;margin:7px 0 20px}
+    .edit-tab{border:1px solid #ffffff2b;border-radius:12px;background:transparent;color:#ead0df;padding:11px 15px;font-weight:700;font-size:14px}
+    .edit-tab[aria-selected="true"]{color:#462039;background:#ffc2d4;border-color:#ffc2d4}
+    .field-label{display:block;margin:0 0 8px;font-weight:700;font-size:14px;color:#ffe7f1}
+    .help{color:#d7bdd0;font-size:13px;line-height:1.5;margin:8px 0 15px}
+    select,.editor-textarea{display:block;width:100%;border:1px solid #ffffff38;border-radius:14px;background:#1b1125b5;color:white;padding:13px 15px;font-size:15px}
+    select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffdbe8' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:18px;background-position:right 13px center;padding-right:40px}
+    .editor-textarea{resize:vertical;min-height:160px;line-height:1.5;margin:11px 0 0}
+    .editor-textarea.large{min-height:235px}
+    .action-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:16px 0}
+    .save-button{border:0;border-radius:13px;background:#ffc0d1;color:#3d1a32;padding:13px 20px;font-weight:800}
+    .save-button:hover{background:#ffd6df}
+    .secondary-button{border:1px solid #ffffff44;border-radius:13px;background:#ffffff12;color:#ffeff5;padding:12px 18px;font-weight:700}
+    .secondary-button:hover{background:#ffffff24}
+    .editor-notice{font-size:13px;color:#ffdce9;min-height:19px;margin:3px 0 0}
+    .editor-divider{border:0;border-top:1px solid #ffffff24;margin:23px 0}
+    .export-block{display:flex;align-items:flex-start;gap:17px;justify-content:space-between}
+    .export-block h3{margin:0 0 6px;font:400 22px Georgia,serif}
+    .export-block p{margin:0;color:#d8bed0;font-size:13px;line-height:1.55;max-width:400px}
+    .export-buttons{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end;flex:none}
+    .reset-button{border:0;background:transparent;color:#f5bed1;text-decoration:underline;text-underline-offset:3px;font-size:13px;padding:8px 0}
+    .hidden{display:none!important}
+    .toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,18px);background:#ffd2dc;color:#422033;padding:12px 20px;border-radius:100px;font-weight:750;font-size:13px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:10;box-shadow:0 12px 35px #0004}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:700px){.page{width:min(100% - 30px,550px)}.topbar{padding:22px 0 13px}.brand{font-size:24px}.count{display:none}.edit-trigger{padding:10px 13px;font-size:13px}.hero{padding:33px 0 13px}h1{font-size:clamp(39px,10vw,59px);letter-spacing:-2px}.subtitle{font-size:14px;padding:0 15px}.category-bar{margin:25px -7px 17px;gap:7px}.category{padding:9px 12px;font-size:12px}.prompt-card{padding:24px 22px 20px;min-height:350px;border-radius:24px}.question{font-size:clamp(28px,7.3vw,39px)}.card-bottom{font-size:12px}.jelly-one{width:300px;height:300px;left:-200px}.jelly-two{width:240px;height:240px;right:-160px}.browse{margin:50px auto 55px}.browse summary{padding:20px}.browse-inner{padding:0 14px 20px}.question-list{grid-template-columns:1fr}.editor-head{padding:24px 20px 16px}.editor-body{padding:0 20px 23px}.export-block{display:block}.export-buttons{justify-content:flex-start;margin-top:13px}}
+    @media(max-width:390px){.brand{font-size:21px}.brand .mark{width:30px;height:30px}.edit-trigger span{display:none}.category{font-size:11px;padding:9px 10px}.question{font-size:27px}.prompt-card{min-height:330px}.main-button{min-width:190px;padding:17px 25px}.round-button{width:49px;height:49px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><div class="jelly jelly-one"></div><div class="jelly jelly-two"></div><div class="jelly jelly-three"></div><span class="spark spark-a">♡</span><span class="spark spark-b">✧</span><span class="spark spark-c">♥</span><span class="spark spark-d">✦</span></div>
+  <div class="page" id="top">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Afterglow home"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#52213d" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.6 5.6 0 0 0-7.9 0l-.9.9-.9-.9a5.6 5.6 0 0 0-7.9 7.9l.9.9L12 21l7.9-7.6.9-.9a5.6 5.6 0 0 0 0-7.9Z"/></svg></span> afterglow<span style="color:#ffaec6">.</span></a>
+      <div class="top-actions"><span class="count" id="topCount">100 LITTLE SECRETS</span><button class="edit-trigger" id="openEditor" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L10 16l-4 1 1-4 9.5-9.5Z"/></svg><span>Edit questions</span></button></div>
+    </header>
+    <main>
+      <section class="hero" aria-label="Introduction"><p class="eyebrow">A little game for closer hearts</p><h1>Truth looks <em>good</em> on you.</h1><p class="subtitle">Some questions are sweet. Some are daring. All are worth asking. ♡</p></section>
+      <nav class="category-bar" aria-label="Question categories">
+        <button class="category" type="button" data-category="truth" aria-pressed="true">♡ All truths</button>
+        <button class="category" type="button" data-category="sweet" aria-pressed="false">Sweet</button>
+        <button class="category" type="button" data-category="spicy" aria-pressed="false">Spicy</button>
+        <button class="category" type="button" data-category="funny" aria-pressed="false">Funny</button>
+        <button class="category" type="button" data-category="group" aria-pressed="false">Group</button>
+        <button class="category" type="button" data-category="dares" aria-pressed="false">Dares</button>
+      </nav>
+      <section class="stage" aria-label="Question game">
+        <article class="prompt-card" id="promptCard" aria-live="polite" aria-atomic="true">
+          <div class="card-top"><span class="tag"><span class="dot"></span><span id="cardType">TRUTH · SWEET</span></span><span class="card-number" id="cardNumber">01 / 100</span></div>
+          <div class="question-wrap"><h2 class="question" id="question">What was your first crush, and do you still remember why?</h2></div>
+          <div class="card-bottom"><span>✦ &nbsp; Honest answers, soft hearts.</span><button class="icon-button" type="button" id="copyQuestion" aria-label="Copy this question" title="Copy question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></button></div>
+        </article>
+        <div class="controls"><button class="round-button" id="previous" type="button" aria-label="Previous question" disabled title="Previous question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button><button class="main-button" type="button" id="next">Another question ♡</button><button class="round-button" id="shuffle" type="button" aria-label="Shuffle is on" aria-pressed="true" title="Turn shuffle off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h3c7 0 7-12 14-12h3"/><path d="M2 6h3c3.5 0 5.2 3 6.8 6"/><path d="M14 16c1.2 1.2 2.4 2 5 2h3"/></svg></button></div>
+        <div class="small-tools"><span id="poolCount">80 truth questions</span><span class="tiny-spark">✦</span><button class="plain-button" id="browseLink" type="button">Browse all 100 questions</button><span class="tiny-spark">✦</span><span>Press <strong>→</strong> for next</span></div>
+      </section>
+      <details class="browse" id="browse"><summary><span><strong>The whole heart-to-heart collection</strong><small>Every truth, every dare — pick your favorite.</small></span><svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="browse-inner"><input class="search" id="search" type="search" placeholder="Search all questions…" aria-label="Search questions"><div class="question-list" id="questionList"></div></div></details>
+    </main>
+    <footer class="footer">Made for late-night talks, stolen glances & a little courage. ♡</footer>
+  </div>
+  <dialog id="editorDialog" aria-labelledby="editorTitle">
+    <div class="editor-head"><div><h2 id="editorTitle">Make it your own. ♡</h2><p>Change one question or paste an entire new collection.</p></div><button class="close-button" id="closeEditor" type="button" aria-label="Close editor">×</button></div>
+    <div class="editor-body">
+      <div class="edit-tabs" role="tablist" aria-label="Edit mode"><button class="edit-tab" id="singleTab" role="tab" type="button" aria-selected="true">This question</button><button class="edit-tab" id="bulkTab" role="tab" type="button" aria-selected="false">Bulk paste</button></div>
+      <section id="singlePanel" role="tabpanel" aria-labelledby="singleTab"><label class="field-label" for="singleText">Edit the question currently on screen</label><textarea id="singleText" class="editor-textarea" rows="5" maxlength="500" spellcheck="true"></textarea><div class="action-row"><button class="save-button" id="saveSingle" type="button">Save this question</button></div></section>
+      <section id="bulkPanel" role="tabpanel" aria-labelledby="bulkTab" class="hidden"><label class="field-label" for="editCategory">Which questions should be replaced?</label><select id="editCategory"><option value="sweet">Sweet truths</option><option value="spicy">Spicy truths</option><option value="funny">Funny truths</option><option value="group">Group truths</option><option value="dares">Flirty dares</option><option value="all">All 100 questions (20 per category)</option></select><p class="help">One question per line. You can paste numbered lists like “1. Your question?”. For all 100, paste exactly 100 lines, ordered Sweet → Spicy → Funny → Group → Dares.</p><textarea id="bulkText" class="editor-textarea large" spellcheck="true" placeholder="1. What's your favorite memory with me?&#10;2. What do you want to ask me?&#10;3. ..."></textarea><div class="action-row"><button class="save-button" id="saveBulk" type="button">Apply pasted questions</button><span class="help" id="lineCount" style="margin:0">20 questions</span></div></section>
+      <p class="editor-notice" id="editorNotice" role="status"></p>
+      <hr class="editor-divider">
+      <div class="export-block"><div><h3>Taking it to GitHub?</h3><p>Your edits save in this browser. Download the updated website to make them permanent for everyone, then replace your GitHub repository’s <code>index.html</code>.</p></div><div class="export-buttons"><button type="button" class="secondary-button" id="downloadSite">Download HTML</button></div></div>
+      <div style="margin-top:19px"><button class="reset-button" id="resetQuestions" type="button">Restore all original questions</button></div>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="application/json" id="question-data">
+  {
+    "sweet": [
+      "What was your first crush, and do you still remember why?",
+      "What’s your flirting style when you actually like someone?",
+      "What’s the biggest relationship green flag you look for early on?",
+      "What’s your ideal first date vibe?",
+      "What’s a romantic gesture that always works on you?",
+      "What’s your love language, and do you think it’s changed over time?",
+      "What’s the fastest way someone has ever won you over?",
+      "Have you ever caught feelings because of good banter alone?",
+      "What’s a texting habit that instantly makes you feel closer to someone?",
+      "What’s something small that makes a first date feel promising?",
+      "What’s a dating red flag you’ve learned to spot early?",
+      "Do you believe in instant chemistry, or does attraction grow for you?",
+      "What’s your favorite way someone shows romantic interest?",
+      "What’s a compliment you secretly love hearing?",
+      "What’s your biggest dating pet peeve?",
+      "What’s the most attractive personality trait someone can have?",
+      "Have you ever had a crush that surprised you?",
+      "What’s something someone can do that gives you instant butterflies?",
+      "What’s something that feels more intimate than people expect?",
+      "What’s the smoothest thing you’ve ever said while flirting?"
+    ],
+    "spicy": [
+      "Have you ever kissed more than one person in the same day?",
+      "What’s the biggest age gap you’ve ever had in a relationship or situation?",
+      "Have you ever had a crush on someone you definitely shouldn’t have?",
+      "Have you ever had feelings for two people at once?",
+      "Have you ever lied about being single (or taken)?",
+      "If you opened up your relationship, who would be the first person you’d want to go on a date with?",
+      "Have you ever caught feelings for someone you told yourself was ‘just for fun’?",
+      "What’s the messiest situation you’ve ever willingly walked into?",
+      "Have you ever gone on a date knowing you were already into someone else?",
+      "Have you ever kept talking to someone even though you knew it wouldn’t end well?",
+      "What’s the most inconvenient crush you’ve had as an adult?",
+      "Have you ever flirted your way into (or out of) a situation?",
+      "What’s a relationship rule you’ve broken—and would you do it again?",
+      "Have you ever wanted someone more because they were unavailable?",
+      "What’s the boldest dating decision you’ve ever made?",
+      "Have you ever gone back to someone you swore you were done with?",
+      "What’s the fastest you’ve ever caught feelings?",
+      "Who’s your biggest dating ‘what if’?",
+      "What’s a dating choice you’d defend, even if everyone judged you for it?",
+      "Have you ever ignored red flags because the chemistry was too good?"
+    ],
+    "funny": [
+      "What’s the most embarrassing thing you’ve done on a date that still haunts you?",
+      "What’s a dating habit you swear you’ll stop…yet keep repeating?",
+      "What’s the worst excuse you’ve ever used to cancel plans?",
+      "Have you ever stalked someone so hard you scared yourself?",
+      "What’s the cringiest thing you’ve said while trying to flirt?",
+      "What’s a red flag you ignored because someone was hot?",
+      "What’s the most unhinged thing you’ve done after one good date?",
+      "Have you ever pretended to like something just to impress someone?",
+      "What’s a dating dealbreaker you loudly claim to have but never enforce?",
+      "What’s the pettiest reason you’ve lost interest in someone?",
+      "Have you ever overanalyzed a text that clearly meant nothing?",
+      "What’s the worst place you’ve run into someone you were dating?",
+      "What’s the fastest you’ve ever gotten the ick?",
+      "Have you ever googled someone and instantly wished you hadn’t?",
+      "What’s a date you knew was a bad idea but agreed to anyway?",
+      "What’s a dating app bio line that makes you immediately swipe left?",
+      "Have you ever stayed on a date just to be polite?",
+      "What’s the funniest misunderstanding you’ve had while dating?",
+      "What’s something you pretended was casual that absolutely was not?",
+      "What’s a dating opinion you have that would start a group chat fight?"
+    ],
+    "group": [
+      "Who in this room would you never let set you up with someone?",
+      "Who here do you think has the most stories they haven’t told?",
+      "Who in this room would survive longest on a reality dating show?",
+      "Who here would you trust the least with a secret?",
+      "Who in this room do you think is the biggest flirt?",
+      "Who here would you call first if you needed to stir a little drama?",
+      "Who in this room do you think has the boldest dating taste?",
+      "Who here would absolutely fall in love on vacation?",
+      "Who in this room would screenshot your text immediately?",
+      "Who here do you think gets away with the most?",
+      "Who in this room would you bet has the most unread texts?",
+      "Who here would you not want giving you dating advice?",
+      "Who in this room do you think secretly loves chaos?",
+      "Who here would thrive the most in a group chat argument?",
+      "Who in this room would you trust to tell you the harsh truth?",
+      "Who here do you think is the hardest to read?",
+      "Who in this room would accidentally spill a secret?",
+      "Who here would you want on your side in a messy situation?",
+      "Who in this room do you think has the best poker face?",
+      "Who here is most likely to win an argument even when they’re wrong?"
+    ],
+    "dares": [
+      "Give someone in the room a genuine compliment without overthinking it.",
+      "Make eye contact with the person to your left for 15 seconds without laughing.",
+      "Send a random emoji to the last person you texted.",
+      "Act out what your ideal first date looks like—no explaining.",
+      "Pick a song you’d put on to set a flirty mood.",
+      "Describe your perfect romantic movie moment in one sentence.",
+      "Give your best confident walk across the room.",
+      "Tell someone in the room one thing you admire about their vibe.",
+      "Pretend you’re introducing yourself on a first date—confidence only.",
+      "Send a flirty emoji to someone in your contacts.",
+      "Repeat the hottest compliment you’ve ever received like you’re bragging.",
+      "Choose someone and say what makes them instantly likable.",
+      "Recreate your go-to ‘I’m interested’ body language move.",
+      "Pick a word you think is underratedly romantic and explain why.",
+      "Make up a flirty—but harmless—nickname for yourself.",
+      "Tell the group what kind of date would immediately win you over.",
+      "Give a dramatic reading of a totally normal sentence.",
+      "Choose someone and guess what their ideal date vibe is.",
+      "Assuming everyone’s comfortable with it, hold hands with the person next to you for the rest of the round. No half-hearted hand-holding.",
+      "Give your best subtle smile—the kind that says ‘I know something you don’t.’"
+    ]
+  }
+  </script>
+  <script>
+    (() => {
+      'use strict';
+      const groups = ['sweet', 'spicy', 'funny', 'group', 'dares'];
+      const names = {sweet:'Sweet',spicy:'Spicy',funny:'Funny',group:'Group',dares:'Dare'};
+      const builtIn = JSON.parse(document.getElementById('question-data').textContent);
+      const clone = value => JSON.parse(JSON.stringify(value));
+      const hash = value => {let h=2166136261;for(let i=0;i<value.length;i++){h^=value.charCodeAt(i);h=Math.imul(h,16777619)}return (h>>>0).toString(36)};
+      const storageKey = 'afterglow-questions-' + hash(JSON.stringify(builtIn));
+      const safeRead = () => {try { const value=JSON.parse(localStorage.getItem(storageKey));if(value&&groups.every(g=>Array.isArray(value[g])&&value[g].every(s=>typeof s==='string')))return value; } catch(e){} return clone(builtIn);};
+      let bank=safeRead();
+      let category='truth';
+      let shuffle=true;
+      let history=[];
+      let position=-1;
+      let active=null;
+      let toastTimer;
+      let animationTimer;
+      const $ = id => document.getElementById(id);
+      const all = () => groups.flatMap(group=>bank[group].map((text,index)=>({group,index,text,id:group+':'+index})));
+      const pool = () => all().filter(item=>category==='truth'?item.group!=='dares':item.group===category);
+      const format = n => String(n).padStart(2,'0');
+      const total = () => groups.reduce((sum,g)=>sum+bank[g].length,0);
+      const notify = message => {const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2500)};
+      function draw(animate=false){
+        const items=all();
+        const item=items.find(q=>q.id===active)||pool()[0];
+        if(!item){$('question').textContent='No questions here yet. Open the editor to add some ♡';$('cardType').textContent='YOUR TURN';$('cardNumber').textContent='00 / '+format(total());$('previous').disabled=true;return;}
+        active=item.id;
+        const set=()=>{
+          $('question').textContent=item.text;
+          $('cardType').textContent=(item.group==='dares'?'DARE':'TRUTH')+' · '+names[item.group].toUpperCase();
+          $('cardNumber').textContent=format(items.findIndex(x=>x.id===active)+1)+' / '+format(items.length);
+          $('previous').disabled=position<=0;
+          $('poolCount').textContent=pool().length+' '+(category==='dares'?'dares':category==='truth'?'truth questions':'questions');
+          $('topCount').textContent=total()+' LITTLE SECRETS';
+          $('browseLink').textContent='Browse all '+total()+' questions';
+          $('question').classList.remove('out');
+        };
+        clearTimeout(animationTimer);
+        if(animate){$('question').classList.add('out');animationTimer=setTimeout(set,160)}else set();
+      }
+      function choose(id,animate=true,record=true){if(!all().some(x=>x.id===id))return;active=id;if(record){history=history.slice(0,position+1);history.push(id);position=history.length-1;}draw(animate)}
+      function restart(preferredId){const items=pool();history=[];position=-1;active=null;if(items.length)choose(preferredId&&items.some(x=>x.id===preferredId)?preferredId:items[0].id,false);else draw();}
+      function next(){if(position<history.length-1){position++;choose(history[position],true,false);return;}const items=pool();if(!items.length)return;let candidate;if(shuffle){const available=items.filter(x=>x.id!==active);const options=available.length?available:items;candidate=options[Math.floor(Math.random()*options.length)];}else{const i=items.findIndex(x=>x.id===active);candidate=items[(i+1)%items.length];}choose(candidate.id);}
+      function setCategory(value,preferredId){category=value;document.querySelectorAll('[data-category]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.category===value)));restart(preferredId);}
+      function renderBrowse(){const query=$('search').value.trim().toLowerCase();const list=$('questionList');list.replaceChildren();const items=all();let matches=0;items.forEach((item,i)=>{if(query&&!item.text.toLowerCase().includes(query)&&!names[item.group].toLowerCase().includes(query)&&!String(i+1).includes(query))return;matches++;const button=document.createElement('button');button.type='button';button.className='list-question';const small=document.createElement('small');small.textContent='#'+format(i+1)+' · '+(item.group==='dares'?'Dare':names[item.group]+' truth');const span=document.createElement('span');span.className='question-preview';span.textContent=item.text;button.append(small,span);button.addEventListener('click',()=>{$('browse').open=false;setCategory(item.group==='dares'?'dares':'truth',item.id);$('promptCard').scrollIntoView({behavior:'smooth',block:'center'})});list.appendChild(button)});if(!matches){const empty=document.createElement('p');empty.className='no-results';empty.textContent='No matching questions yet ♡';list.appendChild(empty)}}
+      function persist(){try{localStorage.setItem(storageKey,JSON.stringify(bank));return true}catch(e){return false}}
+      function updateBank(){persist();restart();renderBrowse();$('editorNotice').textContent='Saved! Your new questions are ready ♡';notify('Questions updated ♡')}
+      function openEditor(){$('editorNotice').textContent='';$('singleText').value=all().find(x=>x.id===active)?.text||'';$('editorDialog').showModal()}
+      function setEditTab(single){$('singlePanel').classList.toggle('hidden',!single);$('bulkPanel').classList.toggle('hidden',single);$('singleTab').setAttribute('aria-selected',String(single));$('bulkTab').setAttribute('aria-selected',String(!single));$('editorNotice').textContent='';if(!single)fillBulk();}
+      function fillBulk(){const g=$('editCategory').value;const questions=g==='all'?all().map(x=>x.text):bank[g];$('bulkText').value=questions.map((text,i)=>(i+1)+'. '+text).join('\n');countLines()}
+      function parseLines(text){return text.split(/\r?\n/).map(line=>line.trim().replace(/^\s*(?:\d{1,4}[.)\-:]\s*|[-•*]\s+)/,'').trim()).filter(Boolean)}
+      function countLines(){const count=parseLines($('bulkText').value).length;$('lineCount').textContent=count+' question'+(count===1?'':'s')+' ready'}
+      document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.category)));
+      $('next').addEventListener('click',next);
+      $('previous').addEventListener('click',()=>{if(position>0){position--;choose(history[position],true,false)}});
+      $('shuffle').addEventListener('click',()=>{shuffle=!shuffle;$('shuffle').setAttribute('aria-pressed',String(shuffle));$('shuffle').setAttribute('aria-label',shuffle?'Shuffle is on':'Shuffle is off');$('shuffle').title=shuffle?'Turn shuffle off':'Turn shuffle on';notify(shuffle?'Shuffle on ✦':'In order ♡')});
+      $('copyQuestion').addEventListener('click',async()=>{const item=all().find(x=>x.id===active);if(!item)return;try{await navigator.clipboard.writeText(item.text);notify('Question copied ♡')}catch(e){notify('Copy unavailable in this browser')}});
+      $('browseLink').addEventListener('click',()=>{$('browse').open=true;renderBrowse();$('browse').scrollIntoView({behavior:'smooth',block:'start'})});
+      $('search').addEventListener('input',renderBrowse);
+      $('browse').addEventListener('toggle',()=>{if($('browse').open)renderBrowse()});
+      $('openEditor').addEventListener('click',openEditor);
+      $('closeEditor').addEventListener('click',()=>$('editorDialog').close());
+      $('singleTab').addEventListener('click',()=>setEditTab(true));
+      $('bulkTab').addEventListener('click',()=>setEditTab(false));
+      $('editCategory').addEventListener('change',fillBulk);
+      $('bulkText').addEventListener('input',countLines);
+      $('saveSingle').addEventListener('click',()=>{const text=$('singleText').value.trim();if(!text||text.length>500){$('editorNotice').textContent='Please enter a question (up to 500 characters).';return;}const item=all().find(x=>x.id===active);if(!item){$('editorNotice').textContent='Add a question in Bulk paste first.';return;}bank[item.group][item.index]=text;persist();draw();renderBrowse();$('editorNotice').textContent='Saved! Your new question is on the card ♡';notify('Question updated ♡')});
+      $('saveBulk').addEventListener('click',()=>{const items=parseLines($('bulkText').value);const target=$('editCategory').value;if(!items.length||items.some(s=>s.length>500)||items.length>500){$('editorNotice').textContent='Use between 1 and 500 nonempty lines, each under 500 characters.';return;}if(target==='all'){if(items.length!==100){$('editorNotice').textContent='To replace all five groups at once, paste exactly 100 questions (20 for each group).';return;}groups.forEach((g,i)=>bank[g]=items.slice(i*20,(i+1)*20));}else{bank[target]=items;}updateBank()});
+      $('downloadSite').addEventListener('click',()=>{const doc=document.documentElement.cloneNode(true);const embedded=doc.querySelector('#question-data');embedded.textContent=JSON.stringify(bank,null,2).replace(/</g,'\\u003c');const html='<!doctype html>\n'+doc.outerHTML;const blob=new Blob([html],{type:'text/html;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='index.html';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);notify('Updated index.html downloaded ♡')});
+      $('resetQuestions').addEventListener('click',()=>{if(!confirm('Restore all 100 original questions? Your changes in this browser will be removed.'))return;bank=clone(builtIn);try{localStorage.removeItem(storageKey)}catch(e){}setCategory('truth');fillBulk();$('singleText').value=bank.sweet[0];renderBrowse();$('editorNotice').textContent='All original questions are back ♡';notify('Original questions restored')});
+      document.addEventListener('keydown',event=>{if($('editorDialog').open||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(event.key==='ArrowRight'){event.preventDefault();next()}if(event.key==='ArrowLeft'&&position>0){event.preventDefault();position--;choose(history[position],true,false)}});
+      if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){let scheduled=false;let x=0,y=0;window.addEventListener('pointermove',event=>{x=(event.clientX/window.innerWidth-.5)*22;y=(event.clientY/window.innerHeight-.5)*22;if(!scheduled){scheduled=true;requestAnimationFrame(()=>{document.documentElement.style.setProperty('--mouse-x',x+'px');document.documentElement.style.setProperty('--mouse-y',y+'px');scheduled=false})}},{passive:true})}
+      restart();renderBrowse();
+    })();
+  </script>
+</body>
+</html>
